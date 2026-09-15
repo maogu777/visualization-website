@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>第5章：D3.js 可视化</title><link rel="stylesheet" href="../lesson.css"><script src="https://cdn.jsdelivr.net/npm/d3@7"></script></head>
+<body>
+<header class="lesson-hero"><div class="lesson-hero-inner"><a class="back-link" href="../index.html">← 返回课程首页</a><div class="eyebrow">CHAPTER 05 · D3.JS</div><h1>第5章：D3.js 可视化</h1><p>从数据出发，用 D3.js 绘制第一个交互式图表。</p></div></header>
+<nav class="lesson-nav"><div class="lesson-nav-inner"><a href="#learn">讲解</a><a href="#svg">SVG 图形</a><a href="#code">关键代码</a><a href="#demo">在线演示</a></div></nav>
+<div class="lesson-layout"><aside class="side"><strong>章节目录</strong><a href="#learn">5.1 D3.js 是什么</a><a href="#svg">5.2 数据与 SVG</a><a href="#code">5.3 关键代码</a><a href="#demo">5.4 在线演示</a></aside>
+<main class="content">
+<section class="panel" id="learn"><h2>5.1 D3.js 是什么？</h2><p>D3.js 是一个基于 Web 标准的数据可视化库。它擅长把数据映射为网页中的 SVG、HTML 元素，并支持动画和交互。</p></section>
+<section class="panel" id="svg"><h2>5.2 数据与 SVG</h2><p>柱状图可以理解为：每一个数据对象对应一个矩形。数据值越大，矩形的高度越高。</p></section>
+<section class="panel" id="code"><div class="tabs"><button class="tab-btn active">讲解</button><button class="tab-btn">关键代码</button><button class="tab-btn">在线演示</button></div>
+<div class="tab-panel active"><p>本例使用 D3 的比例尺把 0～100 的数据映射到 SVG 高度。</p></div>
+<div class="tab-panel"><pre><code>const y = d3.scaleLinear()
+  .domain([0, 100])
+  .range([height - margin.bottom, margin.top]);
+
+svg.selectAll("rect")
+  .data(data)
+  .join("rect")
+  .attr("x", d =&gt; x(d.name))
+  .attr("y", d =&gt; y(d.value))
+  .attr("height", d =&gt; y(0) - y(d.value));</code></pre></div>
+<div class="tab-panel"><div class="demo"><p>鼠标移动到柱子上，可以看到交互效果。</p><div class="chart-wrap"><svg id="barChart"></svg></div></div></div></section>
+</main></div>
+<div class="footer-nav"><a href="../lesson-04/index.html">← 上一章</a><a href="../lesson-06/index.html">下一章：数据与交互 →</a></div>
+<script src="../lesson.js"></script></body></html>

@@ -1,0 +1,373 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  color: #20264a;
+  background: #f6f8fc;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Microsoft YaHei",
+               "PingFang SC", Arial, sans-serif;
+  line-height: 1.7;
+}
+
+a {
+  color: inherit;
+}
+
+/* ---------- Hero ---------- */
+
+.hero {
+  min-height: 318px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+  background: linear-gradient(135deg, #5141c9 0%, #767bea 55%, #8a8ff2 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  width: 330px;
+  height: 330px;
+  border-radius: 50%;
+  right: -120px;
+  top: 55px;
+  background: rgba(255,255,255,.08);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  padding: 48px 24px;
+}
+
+.eyebrow {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 4px;
+  opacity: .9;
+  margin-bottom: 20px;
+}
+
+.hero h1 {
+  margin: 0;
+  font-size: clamp(38px, 5vw, 62px);
+  line-height: 1.2;
+  letter-spacing: 1px;
+  font-weight: 800;
+}
+
+.subtitle {
+  margin: 22px 0 8px;
+  font-size: clamp(17px, 2vw, 22px);
+}
+
+.meta {
+  margin: 0;
+  font-size: 14px;
+  opacity: .78;
+}
+
+/* ---------- Language ---------- */
+
+.lang-switch {
+  position: fixed;
+  z-index: 100;
+  right: 0;
+  top: 0;
+  display: flex;
+  padding: 4px;
+  border-radius: 0 0 0 10px;
+  background: rgba(255,255,255,.95);
+  box-shadow: 0 3px 15px rgba(0,0,0,.12);
+}
+
+.lang-switch button {
+  border: 0;
+  background: transparent;
+  color: #50566f;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.lang-switch button.active {
+  background: #202a43;
+  color: #fff;
+}
+
+/* ---------- Navigation ---------- */
+
+.top-nav {
+  height: 58px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 42px;
+  background: #fff;
+  border-bottom: 1px solid #e8ebf2;
+  box-shadow: 0 2px 8px rgba(35, 45, 80, .05);
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+
+.top-nav a {
+  text-decoration: none;
+  color: #5b5ce2;
+  font-size: 16px;
+  font-weight: 600;
+  transition: transform .2s, color .2s;
+}
+
+.top-nav a:hover {
+  transform: translateY(-1px);
+  color: #4038ba;
+}
+
+/* ---------- Sections ---------- */
+
+.section {
+  max-width: 1050px;
+  margin: 0 auto;
+  padding: 68px 28px;
+}
+
+.light-section {
+  max-width: none;
+  padding-left: max(28px, calc((100% - 1050px) / 2));
+  padding-right: max(28px, calc((100% - 1050px) / 2));
+  background: #fff;
+}
+
+.section-heading {
+  margin-bottom: 32px;
+}
+
+.section-heading h2 {
+  margin: 0 0 8px;
+  font-size: 32px;
+  line-height: 1.3;
+  color: #20264a;
+}
+
+.section-heading p {
+  margin: 0;
+  color: #6d7487;
+  font-size: 16px;
+}
+
+/* ---------- Chapter cards ---------- */
+
+.chapter-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.chapter-card {
+  background: #fff;
+  border: 1px solid #e1e5ee;
+  border-radius: 14px;
+  padding: 27px 27px 24px;
+  min-height: 330px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 18px rgba(40, 48, 85, .06);
+  transition: transform .22s ease, box-shadow .22s ease, border-color .22s ease;
+}
+
+.chapter-card:hover {
+  transform: translateY(-6px);
+  border-color: #cfd1ff;
+  box-shadow: 0 13px 32px rgba(60, 62, 130, .13);
+}
+
+.chapter-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.chapter-number {
+  color: #625de6;
+  font-size: 15px;
+  font-weight: 800;
+}
+
+.status {
+  color: #218b62;
+  background: #dff8eb;
+  border-radius: 999px;
+  padding: 5px 10px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.chapter-card h3 {
+  margin: 18px 0 8px;
+  font-size: 24px;
+  color: #1e2348;
+}
+
+.chapter-card p {
+  color: #657087;
+  font-size: 14px;
+  margin: 0 0 16px;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  margin-top: auto;
+  margin-bottom: 18px;
+}
+
+.tag {
+  padding: 4px 9px;
+  border-radius: 999px;
+  background: #f0f1ff;
+  color: #5a57d9;
+  font-size: 12px;
+}
+
+.chapter-link {
+  display: inline-flex;
+  align-items: center;
+  color: #625de6;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.chapter-link:hover {
+  text-decoration: underline;
+}
+
+/* ---------- Info cards ---------- */
+
+.info-grid {
+  max-width: 1050px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.info-card {
+  padding: 26px;
+  border: 1px solid #e3e6ef;
+  border-radius: 14px;
+  background: #fff;
+}
+
+.info-icon {
+  font-size: 28px;
+  margin-bottom: 8px;
+}
+
+.info-card h3,
+.about-card h3 {
+  margin: 0 0 8px;
+  font-size: 19px;
+}
+
+.info-card p,
+.about-card p {
+  margin: 0;
+  color: #687187;
+  font-size: 14px;
+}
+
+/* ---------- About ---------- */
+
+.about-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.about-card {
+  position: relative;
+  background: #fff;
+  border: 1px solid #e1e5ee;
+  border-radius: 14px;
+  padding: 27px;
+}
+
+.about-label {
+  display: inline-block;
+  margin-bottom: 10px;
+  color: #625de6;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+/* ---------- Footer ---------- */
+
+footer {
+  text-align: center;
+  padding: 28px 20px;
+  color: #7b8292;
+  background: #eef1f7;
+  font-size: 13px;
+}
+
+/* ---------- Responsive ---------- */
+
+@media (max-width: 900px) {
+  .chapter-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .info-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 620px) {
+  .hero {
+    min-height: 300px;
+  }
+
+  .hero h1 {
+    font-size: 36px;
+  }
+
+  .top-nav {
+    gap: 20px;
+  }
+
+  .top-nav a {
+    font-size: 14px;
+  }
+
+  .section,
+  .light-section {
+    padding: 48px 18px;
+  }
+
+  .chapter-grid,
+  .info-grid,
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .chapter-card {
+    min-height: auto;
+  }
+}

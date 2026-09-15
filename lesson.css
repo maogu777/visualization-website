@@ -1,0 +1,188 @@
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Microsoft YaHei", sans-serif;
+  color: #1d2942;
+  background: #f5f7fb;
+  line-height: 1.75;
+}
+a { color: inherit; }
+.lesson-hero {
+  background: linear-gradient(135deg, #5746c9 0%, #8c8eea 100%);
+  color: white;
+  padding: 54px 24px 58px;
+}
+.lesson-hero-inner, .lesson-main {
+  max-width: 1120px;
+  margin: auto;
+}
+.back-link {
+  display: inline-block;
+  margin-bottom: 24px;
+  color: white;
+  text-decoration: none;
+  opacity: .9;
+}
+.eyebrow { letter-spacing: 2px; font-size: 13px; font-weight: 700; }
+.lesson-hero h1 { margin: 8px 0 10px; font-size: 38px; }
+.lesson-hero p { margin: 0; opacity: .92; font-size: 17px; }
+.lesson-nav {
+  background: white;
+  border-bottom: 1px solid #e7eaf1;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+.lesson-nav-inner {
+  max-width: 1120px;
+  margin: auto;
+  padding: 13px 20px;
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+}
+.lesson-nav a {
+  text-decoration: none;
+  padding: 7px 13px;
+  border-radius: 9px;
+  white-space: nowrap;
+  color: #65708a;
+}
+.lesson-nav a:hover { background: #f0efff; color: #5746c9; }
+.lesson-layout {
+  max-width: 1120px;
+  margin: 34px auto;
+  padding: 0 20px;
+  display: grid;
+  grid-template-columns: 235px 1fr;
+  gap: 28px;
+}
+.side {
+  background: white;
+  border: 1px solid #e7eaf1;
+  border-radius: 16px;
+  padding: 18px;
+  height: fit-content;
+  position: sticky;
+  top: 72px;
+}
+.side strong { display: block; margin-bottom: 10px; }
+.side a {
+  display: block;
+  text-decoration: none;
+  color: #68738a;
+  padding: 7px 8px;
+  border-radius: 8px;
+}
+.side a:hover { background: #f2f1ff; color: #5746c9; }
+.content {
+  min-width: 0;
+}
+.panel {
+  background: white;
+  border: 1px solid #e7eaf1;
+  border-radius: 16px;
+  padding: 28px;
+  margin-bottom: 22px;
+  box-shadow: 0 5px 20px rgba(38, 48, 76, .04);
+}
+.panel h2 { margin-top: 0; font-size: 25px; }
+.panel h3 { font-size: 19px; margin-top: 25px; }
+.tabs { display: flex; gap: 8px; margin-bottom: 18px; }
+.tab-btn {
+  border: 1px solid #dfe2eb;
+  background: #f8f9fc;
+  padding: 9px 15px;
+  border-radius: 9px;
+  cursor: pointer;
+  font-weight: 600;
+}
+.tab-btn.active, .tab-btn:hover {
+  background: #5746c9;
+  color: white;
+  border-color: #5746c9;
+}
+.tab-panel { display: none; }
+.tab-panel.active { display: block; }
+pre {
+  background: #171b28;
+  color: #e9ecf5;
+  padding: 18px;
+  border-radius: 12px;
+  overflow-x: auto;
+  font-size: 13px;
+}
+.demo {
+  border: 1px dashed #cfd3e2;
+  background: #fafbfe;
+  border-radius: 14px;
+  padding: 22px;
+}
+.demo-actions { display: flex; flex-wrap: wrap; gap: 9px; margin: 12px 0; }
+.demo button, .demo select, .demo input {
+  border: 1px solid #d5d9e5;
+  border-radius: 8px;
+  padding: 8px 12px;
+  background: white;
+}
+.demo button { cursor: pointer; }
+.demo button:hover { border-color: #5746c9; color: #5746c9; }
+.demo-result {
+  margin-top: 14px;
+  padding: 14px;
+  border-radius: 10px;
+  background: white;
+  border: 1px solid #e2e5ee;
+}
+.preview-card {
+  border: 1px solid #ddd;
+  padding: 18px;
+  border-radius: 12px;
+  background: white;
+}
+.color-box {
+  width: 100%;
+  height: 100px;
+  border-radius: 12px;
+  margin: 12px 0;
+  background: #5746c9;
+  transition: .25s;
+}
+.chart-wrap { overflow-x: auto; }
+svg { max-width: 100%; }
+.metric-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin: 15px 0;
+}
+.metric {
+  background: white;
+  border: 1px solid #e3e6ee;
+  border-radius: 12px;
+  padding: 14px;
+}
+.metric b { display: block; font-size: 24px; }
+.footer-nav {
+  max-width: 1120px;
+  margin: 30px auto 60px;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+}
+.footer-nav a {
+  background: white;
+  border: 1px solid #e2e5ed;
+  border-radius: 10px;
+  padding: 10px 15px;
+  text-decoration: none;
+}
+@media (max-width: 800px) {
+  .lesson-layout { grid-template-columns: 1fr; }
+  .side { position: static; }
+  .lesson-hero h1 { font-size: 30px; }
+  .metric-grid { grid-template-columns: 1fr; }
+}

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>第2章：HTML 页面搭建</title><link rel="stylesheet" href="../lesson.css"></head>
+<body>
+<header class="lesson-hero"><div class="lesson-hero-inner"><a class="back-link" href="../index.html">← 返回课程首页</a><div class="eyebrow">CHAPTER 02 · HTML</div><h1>第2章：HTML 页面搭建</h1><p>使用 HTML 搭建一个完整的网页骨架。</p></div></header>
+<nav class="lesson-nav"><div class="lesson-nav-inner"><a href="#learn">讲解</a><a href="#structure">页面结构</a><a href="#code">关键代码</a><a href="#demo">在线演示</a></div></nav>
+<div class="lesson-layout"><aside class="side"><strong>章节目录</strong><a href="#learn">2.1 HTML 是什么</a><a href="#structure">2.2 页面结构</a><a href="#code">2.3 常用标签</a><a href="#demo">2.4 在线演示</a></aside>
+<main class="content">
+<section class="panel" id="learn"><h2>2.1 HTML 是什么？</h2><p>HTML（HyperText Markup Language）使用标签描述网页内容。标题使用 <code>h1</code>，段落使用 <code>p</code>，按钮使用 <code>button</code>，这些元素最终都会成为 DOM 树中的节点。</p></section>
+<section class="panel" id="structure"><h2>2.2 页面结构</h2><p>常见网页可以划分为头部、导航、主要内容和页脚。使用 <code>header</code>、<code>nav</code>、<code>main</code>、<code>footer</code> 等语义化标签可以让结构更加清晰。</p></section>
+<section class="panel" id="code"><div class="tabs"><button class="tab-btn active">讲解</button><button class="tab-btn">关键代码</button><button class="tab-btn">在线演示</button></div>
+<div class="tab-panel active"><p>下面代码搭建一个包含标题、介绍文字和按钮的基本页面。</p></div>
+<div class="tab-panel"><pre><code>&lt;main&gt;
+  &lt;h1&gt;数据可视化&lt;/h1&gt;
+  &lt;p&gt;用图表讲述数据故事。&lt;/p&gt;
+  &lt;button&gt;开始学习&lt;/button&gt;
+&lt;/main&gt;</code></pre></div>
+<div class="tab-panel"><div class="demo"><div class="preview-card" id="demo2Box"><h3>我的网页</h3><p>这里是一段网页内容。</p></div><div class="demo-actions"><button id="demo2Btn">动态添加内容</button></div></div></div></section>
+</main></div>
+<div class="footer-nav"><a href="../lesson-01/index.html">← 上一章</a><a href="../lesson-03/index.html">下一章：CSS 页面设计 →</a></div>
+<script src="../lesson.js"></script></body></html>

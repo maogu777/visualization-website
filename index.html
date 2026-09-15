@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>如何制作可视化网站</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- 顶部语言切换 -->
+  <div class="lang-switch">
+    <button id="zhBtn" class="active">中</button>
+    <button id="enBtn">EN</button>
+  </div>
+
+  <!-- Hero -->
+  <header class="hero">
+    <div class="hero-content">
+      <div class="eyebrow">VISUALIZATION · WEB DEVELOPMENT</div>
+      <h1 data-zh="《如何制作可视化网站》"
+          data-en="How to Build a Visualization Website">
+        《如何制作可视化网站》
+      </h1>
+      <p class="subtitle"
+         data-zh="从 HTML 到 D3.js：一步一步构建交互式可视化网站"
+         data-en="From HTML to D3.js: Build an Interactive Visualization Website Step by Step">
+        从 HTML 到 D3.js：一步一步构建交互式可视化网站
+      </p>
+      <p class="meta"
+         data-zh="HTML · CSS · JavaScript · D3.js · 数据可视化 · GitHub Pages"
+         data-en="HTML · CSS · JavaScript · D3.js · Data Visualization · GitHub Pages">
+        HTML · CSS · JavaScript · D3.js · 数据可视化 · GitHub Pages
+      </p>
+    </div>
+  </header>
+
+  <!-- 导航 -->
+  <nav class="top-nav">
+    <a href="#chapters">📚 <span data-zh="学习章节" data-en="Chapters">学习章节</span></a>
+    <a href="#usage">▶ <span data-zh="学习方式" data-en="How to Learn">学习方式</span></a>
+    <a href="#about">ℹ <span data-zh="关于课程" data-en="About">关于课程</span></a>
+  </nav>
+
+  <main>
+
+    <!-- 章节 -->
+    <section id="chapters" class="section">
+      <div class="section-heading">
+        <h2 data-zh="学习章节" data-en="Learning Chapters">学习章节</h2>
+        <p data-zh="从网页基础开始，逐步学习 HTML、CSS、JavaScript、D3.js、数据处理、交互设计与网站部署。"
+           data-en="Start from web basics and gradually learn HTML, CSS, JavaScript, D3.js, data processing, interaction design and deployment.">
+          从网页基础开始，逐步学习 HTML、CSS、JavaScript、D3.js、数据处理、交互设计与网站部署。
+        </p>
+      </div>
+
+      <div id="chapterGrid" class="chapter-grid"></div>
+    </section>
+
+    <!-- 学习方式 -->
+    <section id="usage" class="section light-section">
+      <div class="section-heading">
+        <h2 data-zh="学习方式" data-en="How to Learn">学习方式</h2>
+        <p data-zh="每一章都包含知识讲解、关键代码和可运行演示，边学边做。"
+           data-en="Each chapter combines explanations, key code and runnable demonstrations.">
+          每一章都包含知识讲解、关键代码和可运行演示，边学边做。
+        </p>
+      </div>
+
+      <div class="info-grid">
+        <article class="info-card">
+          <div class="info-icon">📖</div>
+          <h3 data-zh="理论学习" data-en="Learn">理论学习</h3>
+          <p data-zh="理解网页结构、样式、脚本、数据和可视化的基本概念。"
+             data-en="Understand the basics of web structure, styling, scripts, data and visualization.">
+            理解网页结构、样式、脚本、数据和可视化的基本概念。
+          </p>
+        </article>
+
+        <article class="info-card">
+          <div class="info-icon">💻</div>
+          <h3 data-zh="代码实践" data-en="Code Practice">代码实践</h3>
+          <p data-zh="通过 HTML、CSS、JavaScript 和 D3.js 代码完成实际页面。"
+             data-en="Build real pages with HTML, CSS, JavaScript and D3.js.">
+            通过 HTML、CSS、JavaScript 和 D3.js 代码完成实际页面。
+          </p>
+        </article>
+
+        <article class="info-card">
+          <div class="info-icon">📊</div>
+          <h3 data-zh="可视化演示" data-en="Visualization">可视化演示</h3>
+          <p data-zh="将 CSV、JSON 等数据转换成柱状图、折线图、散点图等交互式图表。"
+             data-en="Turn CSV and JSON data into interactive charts such as bars, lines and scatter plots.">
+            将 CSV、JSON 等数据转换成柱状图、折线图、散点图等交互式图表。
+          </p>
+        </article>
+
+        <article class="info-card">
+          <div class="info-icon">🚀</div>
+          <h3 data-zh="网站部署" data-en="Deployment">网站部署</h3>
+          <p data-zh="完成网站后使用 GitHub Pages 发布，让其他人通过网址访问。"
+             data-en="Publish the finished website with GitHub Pages so others can access it online.">
+            完成网站后使用 GitHub Pages 发布，让其他人通过网址访问。
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <!-- 关于 -->
+    <section id="about" class="section">
+      <div class="section-heading">
+        <h2 data-zh="关于本课程" data-en="About This Course">关于本课程</h2>
+        <p data-zh="本网站以“学习 + 实践 + 演示”为核心，展示一个可视化网站从零开始的制作过程。"
+           data-en="This course combines learning, practice and demonstrations to show how a visualization website is built from scratch.">
+          本网站以“学习 + 实践 + 演示”为核心，展示一个可视化网站从零开始的制作过程。
+        </p>
+      </div>
+
+      <div class="about-grid">
+        <article class="about-card">
+          <span class="about-label">01</span>
+          <h3 data-zh="学习目标" data-en="Learning Goals">学习目标</h3>
+          <p data-zh="掌握制作可视化网站所需的基础前端知识，并能够独立完成一个简单的交互式可视化项目。"
+             data-en="Master the frontend basics needed for visualization websites and build a simple interactive visualization project independently.">
+            掌握制作可视化网站所需的基础前端知识，并能够独立完成一个简单的交互式可视化项目。
+          </p>
+        </article>
+
+        <article class="about-card">
+          <span class="about-label">02</span>
+          <h3 data-zh="技术栈" data-en="Technology Stack">技术栈</h3>
+          <p>HTML5 · CSS3 · JavaScript ES6+ · D3.js v7 · SVG · CSV / JSON</p>
+        </article>
+
+        <article class="about-card">
+          <span class="about-label">03</span>
+          <h3 data-zh="开发方式" data-en="Development">开发方式</h3>
+          <p data-zh="采用静态网站结构，可直接使用 Python 本地服务器运行，也可以部署到 GitHub Pages。"
+             data-en="Use a static website structure that can run with a local Python server and be deployed to GitHub Pages.">
+            采用静态网站结构，可直接使用 Python 本地服务器运行，也可以部署到 GitHub Pages。
+          </p>
+        </article>
+
+        <article class="about-card">
+          <span class="about-label">04</span>
+          <h3 data-zh="最终成果" data-en="Final Project">最终成果</h3>
+          <p data-zh="完成一个包含多个教学章节、代码示例、数据集和 D3.js 交互式图表的完整网站。"
+             data-en="Build a complete website with learning chapters, code examples, datasets and interactive D3.js charts.">
+            完成一个包含多个教学章节、代码示例、数据集和 D3.js 交互式图表的完整网站。
+          </p>
+        </article>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>《如何制作可视化网站》 · HTML + CSS + JavaScript + D3.js</p>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>

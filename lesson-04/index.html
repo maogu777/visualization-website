@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>第4章：JavaScript 交互</title><link rel="stylesheet" href="../lesson.css"></head>
+<body>
+<header class="lesson-hero"><div class="lesson-hero-inner"><a class="back-link" href="../index.html">← 返回课程首页</a><div class="eyebrow">CHAPTER 04 · JAVASCRIPT</div><h1>第4章：JavaScript 交互</h1><p>让网页能够响应用户操作并动态改变内容。</p></div></header>
+<nav class="lesson-nav"><div class="lesson-nav-inner"><a href="#learn">讲解</a><a href="#dom">DOM 与事件</a><a href="#code">关键代码</a><a href="#demo">在线演示</a></div></nav>
+<div class="lesson-layout"><aside class="side"><strong>章节目录</strong><a href="#learn">4.1 JavaScript 作用</a><a href="#dom">4.2 DOM 与事件</a><a href="#code">4.3 关键代码</a><a href="#demo">4.4 在线演示</a></aside>
+<main class="content">
+<section class="panel" id="learn"><h2>4.1 JavaScript 做什么？</h2><p>如果 HTML 是骨架、CSS 是外观，那么 JavaScript 就是让网页“动起来”的部分。可视化网站中的筛选、按钮、提示框、动态更新都离不开 JavaScript。</p></section>
+<section class="panel" id="dom"><h2>4.2 DOM 与事件</h2><p>JavaScript 可以通过 <code>querySelector</code> 找到元素，再通过 <code>addEventListener</code> 监听点击、输入等事件。</p></section>
+<section class="panel" id="code"><div class="tabs"><button class="tab-btn active">讲解</button><button class="tab-btn">关键代码</button><button class="tab-btn">在线演示</button></div>
+<div class="tab-panel active"><p>下面的代码让一个数字随着用户点击按钮而变化。</p></div>
+<div class="tab-panel"><pre><code>let count = 0;
+
+button.addEventListener("click", () => {
+  count += 1;
+  output.textContent = count;
+});</code></pre></div>
+<div class="tab-panel"><div class="demo"><h3>点击计数器</h3><div class="demo-result"><b id="counterValue">0</b></div><div class="demo-actions"><button data-counter="-1">-1</button><button data-counter="1">+1</button><button data-counter="5">+5</button></div></div></div></section>
+</main></div>
+<div class="footer-nav"><a href="../lesson-03/index.html">← 上一章</a><a href="../lesson-05/index.html">下一章：D3.js 可视化 →</a></div>
+<script src="../lesson.js"></script></body></html>

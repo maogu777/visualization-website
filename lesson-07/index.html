@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>第7章：完整网站制作与部署</title><link rel="stylesheet" href="../lesson.css"></head>
+<body>
+<header class="lesson-hero"><div class="lesson-hero-inner"><a class="back-link" href="../index.html">← 返回课程首页</a><div class="eyebrow">CHAPTER 07 · PROJECT</div><h1>第7章：完整网站制作与部署</h1><p>综合 HTML、CSS、JavaScript 和 D3.js 完成一个小型项目。</p></div></header>
+<nav class="lesson-nav"><div class="lesson-nav-inner"><a href="#learn">讲解</a><a href="#flow">项目流程</a><a href="#code">关键代码</a><a href="#demo">在线演示</a></div></nav>
+<div class="lesson-layout"><aside class="side"><strong>章节目录</strong><a href="#learn">7.1 综合项目</a><a href="#flow">7.2 制作流程</a><a href="#code">7.3 关键代码</a><a href="#demo">7.4 在线演示</a></aside>
+<main class="content">
+<section class="panel" id="learn"><h2>7.1 综合项目</h2><p>一个完整的可视化网站通常包含首页、章节或内容页面、数据文件、样式文件和 JavaScript 文件。开发时可以先完成静态页面，再逐步加入交互和可视化。</p></section>
+<section class="panel" id="flow"><h2>7.2 制作与部署流程</h2><ol><li>规划页面和数据。</li><li>用 HTML 搭建结构。</li><li>用 CSS 完成视觉设计。</li><li>用 JavaScript 添加交互。</li><li>用 D3.js 绘制图表。</li><li>本地测试后上传到 GitHub。</li><li>通过 GitHub Pages 发布静态网站。</li></ol></section>
+<section class="panel" id="code"><div class="tabs"><button class="tab-btn active">讲解</button><button class="tab-btn">关键代码</button><button class="tab-btn">在线演示</button></div>
+<div class="tab-panel active"><p>下面用几个指标模拟一个最终项目中的数据概览，并提供随机更新功能。</p></div>
+<div class="tab-panel"><pre><code>const average = values.reduce((a, b) =&gt; a + b, 0) / values.length;
+const maximum = Math.max(...values);
+const minimum = Math.min(...values);
+
+document.querySelector("#average").textContent = average;</code></pre></div>
+<div class="tab-panel"><div class="demo"><h3>最终项目数据概览</h3><div class="metric-grid"><div class="metric">平均值<b id="projectAvg">-</b></div><div class="metric">最大值<b id="projectMax">-</b></div><div class="metric">最小值<b id="projectMin">-</b></div></div><button id="randomizeProject">生成一组新数据</button></div></div></section>
+</main></div>
+<div class="footer-nav"><a href="../lesson-06/index.html">← 上一章</a><a href="../index.html">回到课程首页 →</a></div>
+<script src="../lesson.js"></script></body></html>

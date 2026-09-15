@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>第6章：数据与交互</title><link rel="stylesheet" href="../lesson.css"></head>
+<body>
+<header class="lesson-hero"><div class="lesson-hero-inner"><a class="back-link" href="../index.html">← 返回课程首页</a><div class="eyebrow">CHAPTER 06 · DATA</div><h1>第6章：数据与交互</h1><p>加载、筛选和更新数据，让图表真正与用户联动。</p></div></header>
+<nav class="lesson-nav"><div class="lesson-nav-inner"><a href="#learn">讲解</a><a href="#flow">数据流程</a><a href="#code">关键代码</a><a href="#demo">在线演示</a></div></nav>
+<div class="lesson-layout"><aside class="side"><strong>章节目录</strong><a href="#learn">6.1 数据是什么</a><a href="#flow">6.2 数据处理流程</a><a href="#code">6.3 关键代码</a><a href="#demo">6.4 在线演示</a></aside>
+<main class="content">
+<section class="panel" id="learn"><h2>6.1 数据是什么？</h2><p>可视化的基础是数据。网页可以读取 CSV、JSON 等结构化数据，也可以从接口获得实时数据。拿到数据后，需要先理解字段和数据类型。</p></section>
+<section class="panel" id="flow"><h2>6.2 数据处理流程</h2><ol><li>读取数据。</li><li>检查字段和类型。</li><li>根据需求筛选、排序或聚合。</li><li>把处理后的结果交给图表。</li><li>用户改变条件后重新计算并更新视图。</li></ol></section>
+<section class="panel" id="code"><div class="tabs"><button class="tab-btn active">讲解</button><button class="tab-btn">关键代码</button><button class="tab-btn">在线演示</button></div>
+<div class="tab-panel active"><p>下面用下拉框模拟数据筛选：选择城市后，只显示对应数据。</p></div>
+<div class="tab-panel"><pre><code>const rows = data.filter(d =&gt; d.name === selected);
+
+result.innerHTML = rows
+  .map(d =&gt; `&lt;p&gt;${d.name}：${d.value}&lt;/p&gt;`)
+  .join("");</code></pre></div>
+<div class="tab-panel"><div class="demo"><label>选择城市：</label><select id="cityFilter"><option value="all">全部</option><option>北京</option><option>上海</option><option>广州</option><option>深圳</option><option>杭州</option></select><div id="filterResult" class="demo-result"></div></div></div></section>
+</main></div>
+<div class="footer-nav"><a href="../lesson-05/index.html">← 上一章</a><a href="../lesson-07/index.html">下一章：完整网站制作与部署 →</a></div>
+<script src="../lesson.js"></script></body></html>
